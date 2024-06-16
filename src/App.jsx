@@ -2,6 +2,7 @@ import {useDispatch} from 'react-redux'
 import { useEffect, useState } from 'react'
 import {authService} from './appwrite/auth'
 import './App.css'
+import { Outlet } from 'react-router-dom';
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
       <div className='w-full block'>
         <Header/>
         <main>
-          
+          Todo: <Outlet/>
         </main>
         <Footer/>
       </div>
