@@ -22,11 +22,14 @@ function App() {
     .finally(() => setLoading(false))
   }, [])
 
-  return (
-    <>
-    
-    </>
-  )
+  return !loading ? (
+    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+      <div className='w-full block'>
+        <Header/>
+        <Footer/>
+      </div>
+    </div>
+  ) : null
 }
 
 export default App
