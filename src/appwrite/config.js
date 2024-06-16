@@ -119,4 +119,4 @@ getFilePreview(fileId){
 }
 
 const service = new Service;
-export default Service;
+export default Service; 
