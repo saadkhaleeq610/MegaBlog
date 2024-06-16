@@ -6,8 +6,6 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
 
-  console.log(import.meta.VITE_APPWRITE_URL);
-
   const [loading, setLoading] = useState(true)
   const dispatch = useDispatch();
 
