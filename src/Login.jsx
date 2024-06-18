@@ -44,11 +44,20 @@ function Login() {
                 <form onSubmit={handleSubmit(login)} className="mt-8">
                     <div className="space-y-5">
                         <Input label="Email: " placeholder="Enter your email:" type="email" {...register("email", {
-                            required: true;
+                            required: true,
                             validate: {
                                 matchPatter: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) || "Email address should be a valid address",
                             }
-                        })}></Input>
+                        })}/>
+                        <Input
+                        label="Password: "
+                        type="Password"
+                        placeholder="Enter your Password"
+                        {...register("password", {
+                            required: true
+                        })}
+                        />
+                        <button type="submit" className="w-full">Sign In</button>
                     </div>
                 </form>
             </div>
