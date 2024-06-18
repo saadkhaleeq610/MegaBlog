@@ -46,7 +46,7 @@ function Login() {
                         <Input label="Email: " placeholder="Enter your email:" type="email" {...register("email", {
                             required: true;
                             validate: {
-                                matchPatter: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value)
+                                matchPatter: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) || "Email address should be a valid address",
                             }
                         })}></Input>
                     </div>
