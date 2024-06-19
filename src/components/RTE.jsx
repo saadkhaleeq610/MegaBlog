@@ -15,7 +15,28 @@ export default function RTE({name, control, label, defaultValue = ""}) {
         init={{
           height: 500,
           menubar: false,
-          plugins: []
+          plugins: [
+            "image",
+                "advlist",
+                "autolink",
+                "lists",
+                "link",
+                "image",
+                "charmap",
+                "preview",
+                "anchor",
+                "searchreplace",
+                "visualblocks",
+                "code",
+                "fullscreen",
+                "insertdatetime",
+                "media",
+                "table",
+                "code",
+                "help",
+                "wordcount",
+                "anchor",
+          ]
         }}>
 
         </Editor>
