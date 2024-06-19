@@ -35,10 +35,13 @@ function PostForm() {
       if (file) {
         const fieldId = file.$id
         data.featuredImage = fieldId;
-        await appwriteService.createPost({
+        const dbPost = await appwriteService.createPost({
           ...data,
           userId: userData.$id
         })
+        if (dbPost) {
+          navigate(`/post/${dbPost.$id}`)
+        }
       }
     }
   }
