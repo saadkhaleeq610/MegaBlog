@@ -31,6 +31,15 @@ function PostForm() {
       })
     } else {
       const file = await appwriteService.uploadFile(data.image[0])
+
+      if (file) {
+        const fieldId = file.$id
+        data.featuredImage = fieldId;
+        await appwriteService.createPost({
+          ...data,
+          userId: userData.$id
+        })
+      }
     }
   }
   return (
