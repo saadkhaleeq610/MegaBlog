@@ -8,9 +8,13 @@ import { useSelector } from 'react-redux';
 function PostForm() {
   const {register, handleSubmit, watch, setValue, control, getValues} = useForm({
     defaultValues: {
-      
+      title: post?.title || "",
+      slug: post?.slug || "",
+      content: post?.content || "",
+      status: post?.status || "active",
     }
   })
+  const navigate = useNavigate();
   return (
     <div>
       
