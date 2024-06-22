@@ -6,12 +6,10 @@ export class Service {
     databases;
     bucket;
     constructor(){
-        this.client
-        .setEndpoint(conf.endpoint)
-        .setProject(conf.projectId);
+        this.client.setEndpoint(conf.appwriteUrl).setProject(conf.appwriteProjectId);
 
         this.databases = new Databases(this.client);
-        this.bucket = new this.Storage(this.client);
+        this.bucket = new Storage(this.client);
     }
     
 async createPost({title, slug, content, featuredImage, status, userId}){
@@ -119,4 +117,4 @@ getFilePreview(fileId){
 }
 
 const service = new Service;
-export default Service; 
+export default service; 

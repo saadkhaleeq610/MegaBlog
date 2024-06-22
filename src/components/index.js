@@ -7,7 +7,10 @@ import Logo from "./Logo"
 import PostForm from "./post-form/PostForm"
 import Login from "../pages/Login"
 import Signup from "../pages/Signup"
-import Post from './Post'
 import PostCard from './PostCard'
+import AuthLayout from './AuthLayout'
+import Select from './Select'
+import Input from './Input'
+import Button from './Button'
 
-export {Header, Footer, Container, Logo, LogoutBtn, RTE, PostForm, Login, Signup, PostCard, PostForm};
+export {Header, Footer, Container, Logo, AuthLayout, LogoutBtn, PostForm, Button, Select, Input, RTE, Login, Signup, PostCard};
